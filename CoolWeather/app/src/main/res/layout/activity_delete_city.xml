@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".citymanager.DeleteCityActivity">
+
+    <RelativeLayout
+        android:id="@+id/city_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#03A9F4"
+        android:paddingTop="24dp"> <!-- 修复了多余的 > 符号 -->
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/city_delete_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="返回"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/back5"
+            android:padding="12dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp" />
+
+        <!-- 保存按钮 -->
+        <Button
+            android:id="@+id/city_delete_save"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="保存更改"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/save"
+            android:padding="12dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp" />
+
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/city_delete_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="删除城市"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- 分隔线 - 添加了缺失的 layout_width 和 layout_height -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <!-- 列表视图 -->
+    <ListView
+        android:id="@+id/delete_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
+</LinearLayout>

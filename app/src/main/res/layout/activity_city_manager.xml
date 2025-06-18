@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/manager_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/city_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+
+            android:background="#03A9F4">
+            <Button
+                android:id="@+id/city_manager_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentLeft="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/back5" />
+
+            <Button
+                android:id="@+id/city_manager_delete"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="40dp"
+                android:textSize="25sp"
+                android:textColor="#fff"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/edit" />
+
+            <TextView
+                android:id="@+id/city_manager_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="城市管理"
+                android:textSize="30sp"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/city_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="#DCDCDC" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/city_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:divider="@null" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <fragment
+        android:id="@+id/choose_area_fragment"
+        android:name="com.example.coolweather.ChooseAreaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/city_manager_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:outlineSpotShadowColor="#000"
+        android:shadowColor="#373737"
+        android:shadowRadius="3.0"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        app:rippleColor="#d1d1d1d1"
+        android:layout_margin="25dp"
+        android:src="@drawable/plus_white" />
+</FrameLayout>
